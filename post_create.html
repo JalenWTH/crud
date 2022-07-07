@@ -1,0 +1,10 @@
+{% extends 'crud/base.html' %}
+{% block title %}<title>Create</title>{% endblock %}
+
+{% block content %}
+	<form method='post'>
+		{% csrf_token %}
+		{{form.as_p}}
+		<input type="submit" name="submit" id='submit' value='Create'>
+	</form>
+{% endblock %}

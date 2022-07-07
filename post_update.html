@@ -1,0 +1,16 @@
+{% extends 'crud/base.html' %}
+{% block title %}<title>Update</title>{% endblock %}
+
+{% block content %}
+<form method='post'>
+	{% csrf_token %}
+	{{form.as_p}}
+	<input type="submit" name="ConfirmUpdate" id='submit' value='Confirm'>
+	<!-- Confirm Button -->
+
+	<form action='/crud/home/'>
+		<input type="submit" name="Cancel" id='submit' value='Cancel'>
+	</form>
+	<!-- Cancel Button -->
+</form>
+{% endblock %}

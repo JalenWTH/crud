@@ -1,0 +1,18 @@
+{% extends 'crud/base.html' %}
+
+{% block title %}<title>Home</title>{% endblock %}
+
+{% block content %}
+<div>
+	<h1><a href="{% url 'CreateView' %}">Create New Post</a></h1><br><br>
+
+	{% for post in object_list %}
+	<div class='post'>
+		<h3>{{post.title}}</h3>
+		<p>{{post.body}}</p>
+		<a href="{% url 'DeleteView' post.post_id %}">Delete</a>
+		<a href="{% url 'UpdateView' post.post_id %}">Edit</a>
+	</div><br>
+	{% endfor %}
+</div>
+{% endblock %}
