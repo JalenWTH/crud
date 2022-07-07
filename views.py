@@ -4,11 +4,6 @@ from django.views.generic.list import ListView
 from .models import Post
 from .forms import PostForm
 
-
-'''
-post_id is undefined in DeleteView
-'''
-
 class Home(ListView):
 	model=Post
 	template_name='crud/home.html'
