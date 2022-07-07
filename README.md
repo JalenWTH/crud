@@ -55,6 +55,7 @@ crud
   urls.py
   views.py
   models.py
+  forms.py
   admin.py
   templates dir
     crud dir <!-- important -->
